@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page_title }}</title>
+  </head>
+  <body>
+    <h1>Welcome to {{ page_title }}</h1>
+    <h2>Available titles:</h2>
+
+    <ul>
+    {%- for title in title_list %}
+      {# here we generate the list of titles #}
+
+        <li>Book {{loop.index}}: {{ title }}{% if not loop.last %},{% endif %}</li>
+    {%- endfor %}
+    </ul>
+
+  </body>
+</html>
